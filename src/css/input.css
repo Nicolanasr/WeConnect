@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+@layer base {
+	body {
+		@apply bg-white;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply tracking-wide;
+	}
+
+	p,
+	ul {
+		@apply tracking-wide text-gray-500;
+	}
+
+	.list-custom i {
+		@apply text-primary;
+	}
+
+	.btn {
+		@apply py-2 px-4 rounded-md shadow-lg transition-all inline-block;
+	}
+	.btn-white {
+		@apply bg-white text-gray-500;
+	}
+
+	.btn-white:hover {
+		@apply bg-gray-50;
+	}
+
+	.btn-primary {
+		@apply bg-primary text-white;
+	}
+
+	.btn-primary:hover {
+		@apply bg-orange-300;
+	}
+	.btn-transparent {
+		@apply border border-gray-500 text-gray-500;
+	}
+
+	.btn-transparent:hover {
+		@apply text-white bg-gray-600;
+	}
+
+	.about-card-container {
+		@apply relative hover:after:opacity-100 after:transition-all after:opacity-0 after:absolute after:left-0 after:right-0 after:h-1 after:bg-primary-grey;
+	}
+	.about-card-content {
+		@apply text-center text-secondary py-6 px-2  hover:bg-white transition-all rounded-xl;
+	}
+	.about-card-icon {
+		@apply h-28 w-28 rounded-full mx-auto shadow-xl;
+	}
+	.about-card-content h4 {
+		@apply text-xl font-bold;
+	}
+	.about-card-content p {
+		@apply text-sm text-secondary;
+	}
+	.about-card-content a {
+		@apply mt-2 inline-block underline;
+	}
+	.service-card {
+		@apply bg-white p-4 shadow-sm flex flex-col;
+	}
+	.service-card-reverse {
+		@apply sm:flex-col-reverse;
+	}
+	.service-card-img {
+		@apply h-52 bg-gray-100 w-full;
+	}
+	.service-card-content {
+		@apply text-center text-secondary px-2 py-6;
+	}
+	.service-card-content h4 {
+		@apply text-xl font-bold;
+	}
+	.service-card-content p {
+		@apply text-sm text-secondary;
+	}
+	.service-card-content a {
+		@apply mt-2 inline-block underline;
+	}
+	.input {
+		@apply bg-white px-2 py-2 rounded-sm;
+	}
+
+	.collapsible {
+		@apply cursor-pointer p-4 w-full border-none text-left  outline-none text-secondary bg-white transition-all font-bold tracking-wide;
+	}
+	.collapsible-active {
+		@apply bg-secondary text-white;
+	}
+
+	.collapsible-content {
+		@apply px-6 max-h-0 overflow-hidden transition-all bg-white text-sm;
+	}
+
+	.collapsible-content p {
+		margin: 1rem 0;
+	}
+
+	.collapsible:after {
+		content: "\002B";
+		font-weight: bold;
+		float: right;
+		margin-left: 5px;
+	}
+
+	.collapsible-active:after {
+		content: "\2212";
+	}
+	.team-card {
+		@apply max-w-64 mx-auto w-full text-center p-4 transition-all;
+	}
+	.team-card:hover {
+		@apply bg-white shadow-xl;
+	}
+	.team-card img {
+		@apply w-full aspect-square bg-gray-300;
+	}
+	.team-card-content {
+		@apply mt-4;
+	}
+	.team-card-content h4 {
+		@apply font-bold text-secondary text-lg;
+	}
+	.team-card-content p {
+		@apply text-sm text-gray-500;
+	}
+	.testimonial-author {
+		@apply text-xl text-secondary font-semibold mt-4;
+	}
+	.testimonial-company {
+		@apply text-xs;
+	}
+	.img-container {
+		@apply max-h-full min-h-full relative;
+	}
+	.img-container img {
+		@apply h-full max-h-full min-h-full w-full min-w-full max-w-full absolute top-0 bottom-0 left-0 right-0;
+	}
+}
